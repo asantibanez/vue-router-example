@@ -18,12 +18,15 @@ const TemplateRenderedCompoment = {
     `
 };
 
+import VueComponent from './VueComponent.vue';
+
 const router = new VueRouter({
     mode: 'history',
     routes: [
         { path: '/', component: App},
         { path: '/hyperscript', component: RenderedByFunctionsComponent},
-        { path: '/template', component: TemplateRenderedCompoment}
+        { path: '/template', component: TemplateRenderedCompoment},
+        { path: '/component', component: VueComponent}
     ]
 });
 
@@ -34,6 +37,7 @@ new Vue({
             <router-link to="/">Home</router-link>
             <router-link to="/hyperscript">Hyperscript</router-link>
             <router-link to="/template">Template</router-link>
+            <router-link to="/component">Component</router-link>
             <router-view></router-view>
         </div>
     `
